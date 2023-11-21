@@ -14,8 +14,10 @@ In this project we build a REST API to track stars in the sky.
 #### Standalone
 * Create a local database in PostgreSQL with name 'startracker' and password 'password'
 * From the command prompt/terminal, call 'mvn spring-boot:run'
+* If you want to use a different database config, please modify 'application.properties'.
 
 #### Docker
-* mvn clean install -DskipTests
-* docker build -t star-tracker .
-* Upload this image to the docker repository using Docker Desktop if you are signed in.
+* Build the JAR: mvn clean install -DskipTests
+* Build the Docker image: docker build -t star-tracker .
+* Upload this image to the docker repository.
+* Please modify 'Dockerfile' if you would like to use a different JDK image.
