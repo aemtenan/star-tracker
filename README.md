@@ -16,8 +16,8 @@ In this project we build a REST API to track stars in the sky.
 * From the command prompt/terminal, call 'mvn spring-boot:run'
 * If you want to use a different database config, please modify 'application.properties'.
 
-#### Docker
-* Build the JAR: mvn clean install -DskipTests
-* Build the Docker image: docker build -t star-tracker .
-* Upload this image to the docker repository.
-* Please modify 'Dockerfile' if you would like to use a different JDK image.
+#### Docker and Docker Compose
+* Build the JAR: 'mvn clean install -DskipTests'
+* Build the Docker image for star-tracker service: 'docker build -t star-tracker .'
+* Run Docker Compose to start both the star-tracker API and PostgreSQL db - 'docker compose up'
+* Note - Please modify 'Dockerfile' if you would like to use a different JDK image.

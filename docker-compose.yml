@@ -1,0 +1,32 @@
+version: '3.1'
+services:
+  dbpostgresql:
+    image: "postgres:16.1"
+    container_name: dbpostgresql
+    networks:
+      - startracker-pgsql
+    ports:
+      - "5432:5432"
+    volumes: 
+      - C:/Users/ariq/docker/postgres/docker-pg-vol/data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_DB: startracker
+      POSTGRES_PASSWORD: password
+  app:
+    container_name: star-tracker
+    image: star-tracker
+    networks:
+      - startracker-pgsql
+    build: ./
+    ports:
+      - "8080:8080"
+    depends_on:
+      - dbpostgresql
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://dbpostgresql:5432/startracker
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=password
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+
+networks:
+  startracker-pgsql:
