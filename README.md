@@ -8,6 +8,7 @@ In this project we build a REST API to track stars in the sky.
 * Framework: Spring Boot 3.1.5
 * Database: PostgreSQL 16.1
 * Technologies: RESTful API, JPA for Data Access Layer
+* Docker and Docker Compose
 
 ### Instructions
 
@@ -26,7 +27,7 @@ In this project we build a REST API to track stars in the sky.
 | Action        | Method | Path                                 | Body                                                                                                                      | HTTP response |
 |---------------|--------|--------------------------------------|---------------------------------------------------------------------------------------------------------------------------|---------------|
 | Add a star    | POST   | http://localhost:8080/api/v2/stars   | {"name": "Proxima Centauri","constellation": "Centaurus", "distanceInLightYears": "4.2465","temperatureInKelvin": "2992"} | 201           |
-| Get all stars | GET    | http://localhost:8080/api/v2/stars   |                                                                                                                           |               |
+| Get all stars | GET    | http://localhost:8080/api/v2/stars   |                                                                                                                           | 200           |
 | Get a star    | GET    | http://localhost:8080/api/v2/stars/1 |                                                                                                                           | 200           |
 | Update a star | PUT    | http://localhost:8080/api/v2/stars/1 | {"name": "Proxima Centauri","constellation": "Centaurus", "distanceInLightYears": "4.2465","temperatureInKelvin": "3000"} | 200           |
 | Delete a star | DELETE | http://localhost:8080/api/v2/stars/1 |                                                                                                                           | 204           |
