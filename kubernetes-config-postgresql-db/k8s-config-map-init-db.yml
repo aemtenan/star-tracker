@@ -11,5 +11,3 @@ data:
         distanceInLightYears character varying(15),
         temperatureInKelvin character varying(15)
     );
-
-    INSERT INTO stars (name, constellation, distanceInLightYears, temperatureInKelvin) VALUES ('Proxima Centauri', 'Centaurus', '4.2465', '2992');
