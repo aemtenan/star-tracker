@@ -1,7 +1,7 @@
 # Star Tracker API
 
 ## Introduction
-In this project we build a REST API to track stars in the sky.
+In this project we build a containerized REST API to track stars in the sky.
 
 ### Tools Used:
 * Environment: OpenJDK 21
@@ -21,6 +21,13 @@ In this project we build a REST API to track stars in the sky.
 * Build the JAR: 'mvn clean install -DskipTests'
 * Build the Docker image for star-tracker service: 'docker build -t star-tracker .'
 * Run Docker Compose to start both the star-tracker API and PostgreSQL db - 'docker compose up'
+
+#### Kubernetes
+* k8s-persistent-volume-db: Defines the persistent volume storage in the cluster.
+* k8s-persistent-volume-claim-db: Defines the request for storage by a user. Contains information such as specific size and access modes to persistent volume resources.
+* k8s-config-map-init-db: Defines a ConfigMap to store database initialization configuration data.
+* k8s-service-db: Defines a Service to expose the PostgreSQL database as a network application.
+* k8s-deployment-db: Defines the deployment to manage the pods running the PostgreSQL database workload.
 
 ## API Reference
 
