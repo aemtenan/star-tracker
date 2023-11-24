@@ -31,7 +31,7 @@ In this project we build a containerized REST API to track stars in the sky.
 * For each YAML file, execute - kubectl apply -f {file_name}.yml
 * Verify the database pod is running by executing - kubectl get all
 * Connect to the pod, login using user postgres, and connect to the 'startracker' database to verify the database was initialized:
-  ![alt text](https://github.com/aemtenan/skiresort/blob/main/src/main/resources/static/k8s-db.png?raw=true)
+  ![alt text](https://github.com/aemtenan/star-tracker/blob/main/src/main/resources/static/k8s-db.png?raw=true)
 
 ## API Reference
 
