@@ -28,6 +28,10 @@ In this project we build a containerized REST API to track stars in the sky.
 * k8s-config-map-init-db: Defines a ConfigMap to store database initialization configuration data.
 * k8s-service-db: Defines a Service to expose the PostgreSQL database as a network application.
 * k8s-deployment-db: Defines the deployment to manage the pods running the PostgreSQL database workload.
+* For each YAML file, execute - kubectl apply -f {file_name}.yml
+* Verify the database pod is running by executing - kubectl get all
+* Connect to the pod, login using user postgres, and connect to the 'startracker' database to verify the database was initialized:
+  ![alt text](https://github.com/aemtenan/skiresort/blob/main/src/main/resources/static/k8s-db.png?raw=true)
 
 ## API Reference
 
