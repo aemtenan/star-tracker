@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: star-tracker
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: star-tracker
+  template:
+    metadata:
+      labels:
+        app: star-tracker
+    spec:
+      containers:
+        - image: canadacontainers/star-tracker
+          name: star-tracker
+          ports:
+            - containerPort: 8080
+          env:
+            - name: SPRING_DATASOURCE_PASSWORD
+              value: password
+            - name: SPRING_DATASOURCE_URL
+              value: jdbc:postgresql://postgresql:5432/startracker?useSSL=false
+            - name: SPRING_DATASOURCE_USERNAME
+              value: postgres
+            - name: SPRING_JPA_HIBERNATE_DDL_AUTO
+              value: update

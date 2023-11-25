@@ -23,16 +23,17 @@ In this project we build a containerized REST API to track stars in the sky.
 * Run Docker Compose to start both the star-tracker API and PostgreSQL db - 'docker compose up'
 
 #### Kubernetes
-Kubernetes config files are located in the folder: kubernetes-config-postgresql-db
-* k8s-persistent-volume-db: Defines the persistent volume storage in the cluster.
-* k8s-persistent-volume-claim-db: Defines the request for storage by a user. Contains information such as specific size and access modes to persistent volume resources.
-* k8s-config-map-init-db: Defines a ConfigMap to store database initialization configuration data.
-* k8s-service-db: Defines a Service to expose the PostgreSQL database as a network application.
-* k8s-deployment-db: Defines the deployment to manage the pods running the PostgreSQL database workload.
+Kubernetes config files for PostgreSQL are located in the folder: kubernetes-config-postgresql-db
+* k8s-persistent-volume-db.yml: Defines the persistent volume storage in the cluster.
+* k8s-persistent-volume-claim-db.yml: Defines the request for storage by a user. Contains information such as specific size and access modes to persistent volume resources.
+* k8s-config-map-init-db.yml: Defines a ConfigMap to store database initialization configuration data.
+* k8s-service-db.yml: Defines a Service to expose the PostgreSQL database as a network application.
+* k8s-deployment-db.yml: Defines the deployment to manage the pods running the PostgreSQL database workload.
 * For each YAML file, execute - kubectl apply -f {file_name}.yml
 * Verify the database pod is running by executing - kubectl get all
 * Connect to the pod, login using user postgres, and connect to the 'startracker' database to view the schema:
   ![alt text](https://github.com/aemtenan/star-tracker/blob/main/src/main/resources/static/k8s-db-schema.png?raw=true)
+
 
 ## API Reference
 
