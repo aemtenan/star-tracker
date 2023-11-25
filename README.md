@@ -1,7 +1,7 @@
 # Star Tracker API
 
 ## Introduction
-In this project we build a containerized REST API to track stars in the sky.
+In this project we build a containerized REST API using Docker and Kubernetes to track stars in the sky.
 
 ### Tools Used:
 * Environment: OpenJDK 21
@@ -9,6 +9,7 @@ In this project we build a containerized REST API to track stars in the sky.
 * Database: PostgreSQL 16.1
 * Technologies: RESTful API, JPA for Data Access Layer
 * Docker and Docker Compose
+* Kubernetes
 
 ### Instructions
 
